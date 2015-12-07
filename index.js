@@ -2,7 +2,8 @@ var express = require('express');
 
 
 function existsInDB(usr,pwd){
-	return 1;
+	if(usr=="me"&&pwd=="hi")return 1;
+	else return 0;
 
 }
 
@@ -14,8 +15,11 @@ app.engine('handlebars',handlebars.engine);
 app.set('view engine','handlebars');
 app.set('port',process.env.PORT || 3000 );
 
+
 app.get('/', function(req, res){
-	if(existsInDB(req.query.usr,req.query.pwd))
+	var id = req.param('usr');
+	var password= req.param('pwd');
+	if(existsInDB(id,password))
 		res.render('gamepage',{pagename: 'Game',style:"game.css"});
 	else
 		res.render('login',{pagename: 'Login',style:"login.css"});

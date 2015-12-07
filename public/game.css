@@ -1,0 +1,18 @@
+#canvas{
+	width:99%;
+	height:70%;
+	border:1px solid grey;
+	border-radius:2px;
+	margin-left:0.5%;;
+	margin-right:auto;
+	margin-top:1%;
+	background:#bbdefb;
+}
+#controlls{
+	width:61%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#controlls>p{
+	margin:10px;
+}

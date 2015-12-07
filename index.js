@@ -1,5 +1,11 @@
 var express = require('express');
 
+
+function existsInDB(usr,pwd){
+	return 1;
+
+}
+
 var app = express();
 var handlebars = require('express3-handlebars')
 			.create({ defaultLayout:'main'});
@@ -9,7 +15,10 @@ app.set('view engine','handlebars');
 app.set('port',process.env.PORT || 3000 );
 
 app.get('/', function(req, res){
-	res.render('login',{title: 'Login'});
+	if(existsInDB(req.query.usr,req.query.pwd))
+		res.render('gamepage',{pagename: 'Game',style:"game.css"});
+	else
+		res.render('login',{pagename: 'Login',style:"login.css"});
 }); 
 app.get('/game', function(req, res){
 	res.type('text/plain');

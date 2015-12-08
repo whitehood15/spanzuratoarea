@@ -1,7 +1,26 @@
 <form method="post" action="/register/new">
-	<input type=text name="nickname" placeholder="Alege un nickname" />
+		
+	<div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" name="nick" id="sample1">
+    <label class="mdl-textfield__label" for="sample1">Porecla</label>
+  </div><div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="email" name="email" id="sample1">
+    <label class="mdl-textfield__label" for="sample1">Email</label>
+  </div><div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="password"name="passwd" id="sample1">
+    <label class="mdl-textfield__label" for="sample1">Parola</label>
+    </div>
+  <div class="mdl-textfield mdl-js-textfield">  	
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="age" id="sample2">
+    <label class="mdl-textfield__label" for="sample2">Varsta</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+	<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"   for="checkbox-2">
+	 <input type="checkbox" id="checkbox-2" name="gender" class="mdl-checkbox__input">
+	 <span class="mdl-checkbox__label">Checkbox</span>
+	</label>
+<button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  Button
+</button>
 
-	<input type="text" name="email" placeholder="Introduceti un email" />
-	<input type="text" name="password" placeholder="Alege o parola" />
-	<input type="text" name="age" placeholder="0"/>
 </form>

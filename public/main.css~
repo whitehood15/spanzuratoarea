@@ -9,13 +9,13 @@ input{
 	margin:10px;
 }
 .demo-layout-transparent {
-  background: #efefef center / cover;
+  background: url('darkbg.jpg') center / cover;
 }
 .demo-layout-transparent .mdl-layout__header,
 .demo-layout-transparent .mdl-layout__drawer-button {
   /* This background is dark, so we set text to white. Use 87% black instead if
      your background is light. */
-  color: black;
+  	color:black !important;
 }
 .mdl-navigation__link{
 		color:black !important;
@@ -39,14 +39,20 @@ input{
   color: #fff;
 }
 #ajutor{
-	
+	display: none;
+	position: absolute;
 	top: 10vmin;
 	vertical-align: middle;
 }
 #contact{
+	display: none;
+	position: absolute;
+	top: 10vmin;
 	vertical-align: middle;
 }
 #despre{
-	margin-top: 10px;
+	display: none;
+	position: absolute;
+	top: 10vmin;
 	vertical-align: middle;
 }

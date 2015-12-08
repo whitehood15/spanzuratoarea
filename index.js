@@ -32,7 +32,7 @@ app.get('/game', function(req, res){
 });
 
 app.get('/register',function (req, res){
-	res.render('register');
+	res.render('register',{pagename:'Inregistrare',style:'register.css'});
 });
 app.post('/register/new',function (req,res){
 	var nickname=req.body.nick;
@@ -40,12 +40,12 @@ app.post('/register/new',function (req,res){
 	var password = req.body.password;
 	var age = req.body.age;
 	if(!(nickname&&email&&password&&age))
-		res.render('regfail');
+		res.render('regfail',{pagename:'Eroare',style:'regfail.css'}); 
 	else{
 		if(insertUser(nickname,email,password,age))
-			res.render('regsuccess');
+			res.render('regsuccess',{pagename:'Succes',style:'regsuccess.css'});
 		else
-			res.render('regfail');
+			res.render('regfail',{pagename:'Eroare',style:'regfail.css'});
 	}
 });
 app.use(function(req,res,next){

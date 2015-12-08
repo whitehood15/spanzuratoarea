@@ -1,0 +1,13 @@
+
+.demo-layout-transparent {
+  background: url('404pic.jpg')center / cover;
+}
+.jumbotron{
+		width: 50%;
+		margin-top: 100px;%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		background:#fefefe !important;
+		
+}

@@ -39,20 +39,26 @@ input{
   color: #fff;
 }
 #ajutor{
+	left: 0;
+  right: 0;
+  margin: 0 auto;
 	display: none;
 	position: absolute;
 	top: 10vmin;
-	vertical-align: middle;
 }
 #contact{
+	left: 0;
+  right: 0;
+  margin: 0 auto;
 	display: none;
 	position: absolute;
 	top: 10vmin;
-	vertical-align: middle;
 }
 #despre{
+	left: 0;
+  right: 0;
+  margin: 0 auto;
 	display: none;
 	position: absolute;
 	top: 10vmin;
-	vertical-align: middle;
 }

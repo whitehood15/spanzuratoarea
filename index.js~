@@ -48,10 +48,9 @@ app.post('/register/new',function (req,res){
 			res.render('regfail',{pagename:'Eroare',style:'regfail.css'});
 	}
 });
-app.use(function(req,res,next){
-	res.type('text/plain');
+app.use(function(req,res,next){	
 	res.status(404);
-	res.send('404 - Not found');
+	res.render('404page',{pagename:"Not Found",style:'404.css'});
 });
 app.listen(app.get('port'),function(){
 	console.log( 'Express started at http://localhost:'+

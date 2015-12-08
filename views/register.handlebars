@@ -1,17 +1,17 @@
-<form method="post" action="/register/new">
+<form >
 		
 	<div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="text" name="nick" id="sample1">
+    <input class="mdl-textfield__input" type="text" id="nick">
     <label class="mdl-textfield__label" for="sample1">Porecla</label>
   </div><div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="email" name="email" id="sample1">
+    <input class="mdl-textfield__input" type="email" id="email">
     <label class="mdl-textfield__label" for="sample1">Email</label>
   </div><div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="password"name="passwd" id="sample1">
+    <input class="mdl-textfield__input" type="password"id="passwd">
     <label class="mdl-textfield__label" for="sample1">Parola</label>
     </div>
   <div class="mdl-textfield mdl-js-textfield">  	
-    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="age" id="sample2">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age" >
     <label class="mdl-textfield__label" for="sample2">Varsta</label>
     <span class="mdl-textfield__error">Input is not a number!</span>
   </div>
@@ -19,8 +19,18 @@
 	 <input type="checkbox" id="checkbox-2" name="gender" class="mdl-checkbox__input">
 	 <span class="mdl-checkbox__label">Checkbox</span>
 	</label>
-<button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+<button onclick="senddata();" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
   Button
 </button>
-
+<div style="width:100%;height:30px;display:none;background:red;" id="warn">Email deja folosit</div>
 </form>
+<script type="text/javascript">
+var nick=document.getElementById('nick').value;
+var nick=document.getElementById('email').value;
+var nick=document.getElementById('passwd').value;
+var nick=document.getElementById('age').value;
+var 
+	function senddata(){
+		
+	}
+</script>

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>	
-<title>{{pagename}} - Spanzuratoarea </title>
+<title>{{pagename}} - Simezuratoarea </title>
 </head>
 <body>
 	
@@ -55,8 +55,8 @@
     Un scurt text pentru ajutor
   </div>
   <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      inchide
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect close">
+      Inchide
     </a>
   </div>
   <div class="mdl-card__menu">
@@ -71,11 +71,11 @@
     <h2 class="mdl-card__title-text">Despre</h2>
   </div>
   <div class="mdl-card__supporting-text">
-    Despre mine si colegul meu
+    Site creat de Siran Ioan(Programator) si Ghitescu Robert (Designer)
   </div>
   <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect close">
+Inchide
     </a>
   </div>
   <div class="mdl-card__menu">
@@ -90,11 +90,11 @@
     <h2 class="mdl-card__title-text">Contact</h2>
   </div>
   <div class="mdl-card__supporting-text">
-    Contacteazane
+    Ne gasesti pe github: http://github.com/whitehood15/
   </div>
   <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Contacteazane
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect close">
+      Inchide
     </a>
   </div>
   <div class="mdl-card__menu">
@@ -123,6 +123,9 @@
 			$("#despre").hide();$("#ajutor").hide();
 				$("#contact").fadeToggle();
 			});		
+			$(".close").click(function () {
+				$("#ajutor").fadeOut();$("#contact").fadeOut();$("#despre").fadeOut();
+			});
 		});
 	</script>
 </body>

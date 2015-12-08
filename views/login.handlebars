@@ -1,7 +1,14 @@
 <h1>Introduceti email si parola</h1>
 <form action="/" method="get">
-	<input name="usr" id="username" placeholder="Email">
-	<input name="pwd" id="password" placeholder="Parola">
-	<input id="submit" type="submit"value="Login"/>
+	
+	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input name="usr" class="mdl-textfield__input" type="text" id="sample3">
+    <label class="mdl-textfield__label" for="sample3">Email</label>
+  </div>
+	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input name = "pwd" class="mdl-textfield__input" type="text" id="sample3">
+    <label class="mdl-textfield__label" for="sample3">Parola</label>
+  </div>
+	<p><input id="submit"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit"value="Login"/>
+	<a href="/register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="register">Register</a></p>
 </form>
-<a href="/register" id="register">Register</a>

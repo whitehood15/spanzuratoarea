@@ -30,7 +30,11 @@ app.get('/game', function(req, res){
 	res.type('text/plain');
 	res.send('Game JSON generation');
 });
-
+app.use(function(req,res,next){
+	res.type('text/plain');
+	res.status(404);
+	res.send('404 - Not found');
+});
 app.get('/register',function (req, res){
 	res.render('register');
 });
@@ -47,11 +51,6 @@ app.post('/register/new',function (req,res){
 		else
 			res.render('regfail');
 	}
-});
-app.use(function(req,res,next){
-	res.type('text/plain');
-	res.status(404);
-	res.send('404 - Not found');
 });
 app.listen(app.get('port'),function(){
 	console.log( 'Express started at http://localhost:'+

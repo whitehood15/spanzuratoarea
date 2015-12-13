@@ -6,14 +6,19 @@
 	margin-left:0.5%;;
 	margin-right:auto;
 	margin-top:1%;
-	background:#bbdefb;
+	background:#fefefe;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 #controlls{
-	width:61%;
+	width:65%;
+	height:200px;
+	max-width:500px;
 	margin-left:auto;
 	color: white !important;
 	margin-right:auto;
+	background:#fefefe;
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-#controlls>p{
-	margin:10px;
-}
+
+	

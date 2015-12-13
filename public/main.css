@@ -62,3 +62,7 @@ input{
 	position: absolute;
 	top: 10vmin;
 }
+#dlink,#clink,#alink{
+	font-size:1.2em;
+	
+}

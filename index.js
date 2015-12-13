@@ -1,8 +1,7 @@
 var express = require('express');
 var cookieParser = require('cookie-parser');
-var expressSanitizer = require('express-sanitizer');
 function existsInDB(usr, pwd){//needs editing when mysql functionality installed
-	if(usr=="me"&&pwd=="hi")return 1;
+	if(usr=="me@gmail.com"&&pwd=="hi")return 1;
 	else return 0;
 }
 function insertUser(nickname,email,password,age){
@@ -11,6 +10,7 @@ function insertUser(nickname,email,password,age){
 var app = express();
 var handlebars = require('express3-handlebars')
 			.create({ defaultLayout:'main'});
+			
 app.use(express.static(__dirname+'/public'));
 app.engine('handlebars',handlebars.engine);
 app.set('view engine','handlebars');
@@ -19,12 +19,12 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(expressSanitizer[options]);
+
 app.use(cookieParser());
 app.get('/', function(req, res){
 	
-		var id =  req.sanitize(req.param('usr'));
-		var password=  req.sanitize(req.param('pwd'));
+		var id =  req.param('usr');
+		var password=  req.param('pwd');
 	
 	if(existsInDB(id,password)){
 		res.cookie('spanzusr',id);
@@ -35,18 +35,21 @@ app.get('/', function(req, res){
 		res.render('login',{pagename: 'Login',style:"login.css"});
 }); 
 app.get('/game', function(req, res){
-	res.type('text/plain');
-	res.send('Game JSON generation');
+	if(req.xhr==true){
+	res.type('application/json');
+	res.send("where our app will be");
+		
+	}else res.redirect(303,'/');
 });
 
 app.get('/register',function (req, res){
 	res.render('register',{pagename:'Inregistrare',style:'register.css'});
 });
 app.post('/register/new',function (req,res){
-	var nickname= req.sanitize(req.body.nick);
-	var email= req.sanitize(req.body.email);
-	var password =  req.sanitize(req.body.password);
-	var age =  req.sanitize(req.body.age);
+	var nickname= req.body.nick;
+	var email= req.body.email;
+	var password =  req.body.password;
+	var age =  req.body.age;
 	if(!(nickname&&email&&password&&age))
 		res.render('regfail',{pagename:'Eroare',style:'regfail.css'}); 
 	else{
